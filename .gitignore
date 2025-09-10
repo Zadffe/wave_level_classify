@@ -1,0 +1,12 @@
+
+# 忽略数据集文件
+data/
+data_instance/
+dataset/
+*.pth
+# Python 缓存
+__pycache__/
+*.pyc
+
+# Jupyter Notebook 检查点
+.ipynb_checkpoints/

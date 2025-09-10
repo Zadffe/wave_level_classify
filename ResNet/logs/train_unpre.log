@@ -1,0 +1,91 @@
+2025-07-05 10:13:04,213 === Loading data ===
+2025-07-05 10:13:04,327 
+Total parameters: 11,169,219
+2025-07-05 10:13:04,327 Trainable parameters: 11,169,219
+2025-07-05 10:14:56,179 Epoch time: 1.86m 51.85s
+2025-07-05 10:15:31,851 Epoch [1/30]  Train Loss: 0.5479  Test Loss: 0.6361  Test Acc: 0.6960  
+2025-07-05 10:15:31,851 level2 Precision: 0.6977  Recall: 1.0000 F1-score: 0.8219(Support: 750)
+2025-07-05 10:15:31,852 level3 Precision: 0.6217  Recall: 0.3507 F1-score: 0.4484(Support: 750)
+2025-07-05 10:15:31,853 level4 Precision: 0.7354  Recall: 0.7373 F1-score: 0.7364(Support: 750)
+2025-07-05 10:15:32,043 Best model saved at epoch 1 
+2025-07-05 10:17:27,628 Epoch time: 1.93m 55.58s
+2025-07-05 10:18:02,855 Epoch [2/30]  Train Loss: 0.4680  Test Loss: 0.4248  Test Acc: 0.7978  
+2025-07-05 10:18:02,855 level2 Precision: 0.9928  Recall: 0.9187 F1-score: 0.9543(Support: 750)
+2025-07-05 10:18:02,856 level3 Precision: 0.8041  Recall: 0.5200 F1-score: 0.6316(Support: 750)
+2025-07-05 10:18:02,856 level4 Precision: 0.6685  Recall: 0.9547 F1-score: 0.7864(Support: 750)
+2025-07-05 10:18:03,065 Best model saved at epoch 2 
+2025-07-05 10:19:58,882 Epoch time: 1.93m 55.81s
+2025-07-05 10:20:32,381 Epoch [3/30]  Train Loss: 0.4456  Test Loss: 0.9721  Test Acc: 0.6258  
+2025-07-05 10:20:32,381 level2 Precision: 0.6837  Recall: 1.0000 F1-score: 0.8121(Support: 750)
+2025-07-05 10:20:32,382 level3 Precision: 0.4708  Recall: 0.4627 F1-score: 0.4667(Support: 750)
+2025-07-05 10:20:32,382 level4 Precision: 0.7476  Recall: 0.4147 F1-score: 0.5334(Support: 750)
+2025-07-05 10:22:25,593 Epoch time: 1.89m 53.21s
+2025-07-05 10:22:59,259 Epoch [4/30]  Train Loss: 0.4362  Test Loss: 1.5974  Test Acc: 0.6080  
+2025-07-05 10:22:59,259 level2 Precision: 0.6500  Recall: 0.9507 F1-score: 0.7721(Support: 750)
+2025-07-05 10:22:59,259 level3 Precision: 0.5137  Recall: 0.4493 F1-score: 0.4794(Support: 750)
+2025-07-05 10:22:59,260 level4 Precision: 0.6398  Recall: 0.4240 F1-score: 0.5100(Support: 750)
+2025-07-05 10:24:49,630 Epoch time: 1.84m 50.37s
+2025-07-05 10:25:23,260 Epoch [5/30]  Train Loss: 0.4280  Test Loss: 0.4602  Test Acc: 0.7631  
+2025-07-05 10:25:23,261 level2 Precision: 0.8242  Recall: 1.0000 F1-score: 0.9036(Support: 750)
+2025-07-05 10:25:23,261 level3 Precision: 0.6652  Recall: 0.5853 F1-score: 0.6227(Support: 750)
+2025-07-05 10:25:23,261 level4 Precision: 0.7765  Recall: 0.7040 F1-score: 0.7385(Support: 750)
+2025-07-05 10:27:13,399 Epoch time: 1.84m 50.14s
+2025-07-05 10:27:46,775 Epoch [6/30]  Train Loss: 0.4193  Test Loss: 0.3739  Test Acc: 0.8178  
+2025-07-05 10:27:46,775 level2 Precision: 0.9957  Recall: 0.9253 F1-score: 0.9592(Support: 750)
+2025-07-05 10:27:46,775 level3 Precision: 0.7082  Recall: 0.7733 F1-score: 0.7393(Support: 750)
+2025-07-05 10:27:46,776 level4 Precision: 0.7711  Recall: 0.7547 F1-score: 0.7628(Support: 750)
+2025-07-05 10:27:46,814 Best model saved at epoch 6 
+2025-07-05 10:29:37,269 Epoch time: 1.84m 50.46s
+2025-07-05 10:30:10,972 Epoch [7/30]  Train Loss: 0.4040  Test Loss: 0.3857  Test Acc: 0.8009  
+2025-07-05 10:30:10,973 level2 Precision: 0.8939  Recall: 1.0000 F1-score: 0.9440(Support: 750)
+2025-07-05 10:30:10,973 level3 Precision: 0.7188  Recall: 0.6613 F1-score: 0.6889(Support: 750)
+2025-07-05 10:30:10,973 level4 Precision: 0.7712  Recall: 0.7413 F1-score: 0.7559(Support: 750)
+2025-07-05 10:32:00,962 Epoch time: 1.83m 49.99s
+2025-07-05 10:32:34,711 Epoch [8/30]  Train Loss: 0.4038  Test Loss: 0.4732  Test Acc: 0.7702  
+2025-07-05 10:32:34,711 level2 Precision: 0.8371  Recall: 1.0000 F1-score: 0.9113(Support: 750)
+2025-07-05 10:32:34,711 level3 Precision: 0.6788  Recall: 0.5947 F1-score: 0.6340(Support: 750)
+2025-07-05 10:32:34,711 level4 Precision: 0.7704  Recall: 0.7160 F1-score: 0.7422(Support: 750)
+2025-07-05 10:34:24,833 Epoch time: 1.84m 50.12s
+2025-07-05 10:34:58,644 Epoch [9/30]  Train Loss: 0.3945  Test Loss: 0.3870  Test Acc: 0.8013  
+2025-07-05 10:34:58,645 level2 Precision: 1.0000  Recall: 0.8973 F1-score: 0.9459(Support: 750)
+2025-07-05 10:34:58,645 level3 Precision: 0.7480  Recall: 0.6253 F1-score: 0.6812(Support: 750)
+2025-07-05 10:34:58,645 level4 Precision: 0.6958  Recall: 0.8813 F1-score: 0.7776(Support: 750)
+2025-07-05 10:36:48,932 Epoch time: 1.84m 50.29s
+2025-07-05 10:37:22,524 Epoch [10/30]  Train Loss: 0.3869  Test Loss: 1.0063  Test Acc: 0.5627  
+2025-07-05 10:37:22,524 level2 Precision: 1.0000  Recall: 0.1933 F1-score: 0.3240(Support: 750)
+2025-07-05 10:37:22,524 level3 Precision: 0.4165  Recall: 0.7787 F1-score: 0.5428(Support: 750)
+2025-07-05 10:37:22,525 level4 Precision: 0.7639  Recall: 0.7160 F1-score: 0.7392(Support: 750)
+2025-07-05 10:39:12,699 Epoch time: 1.84m 50.17s
+2025-07-05 10:39:46,190 Epoch [11/30]  Train Loss: 0.3835  Test Loss: 0.3891  Test Acc: 0.7951  
+2025-07-05 10:39:46,190 level2 Precision: 0.9954  Recall: 0.8613 F1-score: 0.9235(Support: 750)
+2025-07-05 10:39:46,190 level3 Precision: 0.6996  Recall: 0.6800 F1-score: 0.6897(Support: 750)
+2025-07-05 10:39:46,190 level4 Precision: 0.7259  Recall: 0.8440 F1-score: 0.7805(Support: 750)
+2025-07-05 10:41:36,626 Epoch time: 1.84m 50.44s
+2025-07-05 10:42:10,302 Epoch [12/30]  Train Loss: 0.3761  Test Loss: 0.3823  Test Acc: 0.8018  
+2025-07-05 10:42:10,302 level2 Precision: 0.9590  Recall: 0.9667 F1-score: 0.9628(Support: 750)
+2025-07-05 10:42:10,302 level3 Precision: 0.8725  Recall: 0.4747 F1-score: 0.6149(Support: 750)
+2025-07-05 10:42:10,302 level4 Precision: 0.6657  Recall: 0.9640 F1-score: 0.7876(Support: 750)
+2025-07-05 10:44:06,630 Epoch time: 1.94m 56.33s
+2025-07-05 10:44:40,801 Epoch [13/30]  Train Loss: 0.3502  Test Loss: 0.3287  Test Acc: 0.8364  
+2025-07-05 10:44:40,801 level2 Precision: 0.9432  Recall: 0.9733 F1-score: 0.9580(Support: 750)
+2025-07-05 10:44:40,801 level3 Precision: 0.7877  Recall: 0.6973 F1-score: 0.7397(Support: 750)
+2025-07-05 10:44:40,801 level4 Precision: 0.7746  Recall: 0.8387 F1-score: 0.8054(Support: 750)
+2025-07-05 10:44:40,840 Best model saved at epoch 13 
+2025-07-05 10:46:32,232 Epoch time: 1.86m 51.39s
+2025-07-05 10:47:14,674 Epoch [14/30]  Train Loss: 0.3436  Test Loss: 0.3349  Test Acc: 0.8253  
+2025-07-05 10:47:14,674 level2 Precision: 0.9255  Recall: 0.9773 F1-score: 0.9507(Support: 750)
+2025-07-05 10:47:14,674 level3 Precision: 0.8182  Recall: 0.6120 F1-score: 0.7002(Support: 750)
+2025-07-05 10:47:14,674 level4 Precision: 0.7414  Recall: 0.8867 F1-score: 0.8075(Support: 750)
+2025-07-05 10:47:14,674 Early stopping triggered at epoch 14
+2025-07-05 10:47:17,305 
+Confusion Matrix (count):
+2025-07-05 10:47:17,305 
+[[730  20   0]
+ [ 44 523 183]
+ [  0 121 629]]
+2025-07-05 10:47:17,305 
+Confusion Matrix (percentage):
+2025-07-05 10:47:17,306 
+[[97.33333333  2.66666667  0.        ]
+ [ 5.86666667 69.73333333 24.4       ]
+ [ 0.         16.13333333 83.86666667]]

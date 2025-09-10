@@ -1,0 +1,10 @@
+2025-06-14 11:07:05,306 === Loading data ===
+2025-06-14 11:07:05,681 
+Total parameters: 11,169,219
+2025-06-14 11:07:05,681 Trainable parameters: 11,169,219
+2025-06-14 11:27:46,322 Epoch time: 20.68m 40.64s
+2025-06-14 11:32:45,195 Epoch [1/30]  Train Loss: 0.5811  Test Loss: 0.4209  Test Acc: 0.7991  
+2025-06-14 11:32:45,195 level2 Precision: 0.9555  Recall: 0.9440 F1-score: 0.9497(Support: 750)
+2025-06-14 11:32:45,195 level3 Precision: 0.7826  Recall: 0.5520 F1-score: 0.6474(Support: 750)
+2025-06-14 11:32:45,195 level4 Precision: 0.6898  Recall: 0.9013 F1-score: 0.7815(Support: 750)
+2025-06-14 11:32:45,282 Best model saved at epoch 1 

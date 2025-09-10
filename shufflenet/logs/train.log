@@ -1,0 +1,459 @@
+2025-07-26 16:45:49,055 === Loading data ===
+2025-07-26 16:45:49,149 === Model Summary ===
+2025-07-26 16:45:49,149 Model Structure:
+2025-07-26 16:45:49,149 
+ShuffleNet(
+  (conv1): BasicConv2d(
+    (conv): Conv2d(1, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (stage2): Sequential(
+    (0): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(24, 50, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(50, 50, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=50)
+          (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(50, 176, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(176, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): AvgPool2d(kernel_size=3, stride=2, padding=1)
+    )
+    (1): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(200, 50, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(50, 50, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=50)
+          (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(50, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (2): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(200, 50, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(50, 50, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=50)
+          (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(50, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (3): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(200, 50, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(50, 50, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=50)
+          (1): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(50, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+  )
+  (stage3): Sequential(
+    (0): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(200, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): AvgPool2d(kernel_size=3, stride=2, padding=1)
+    )
+    (1): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (2): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (3): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (4): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (5): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (6): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (7): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 100, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(100, 100, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=100)
+          (1): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(100, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+  )
+  (stage4): Sequential(
+    (0): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(400, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(200, 200, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=200)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(200, 400, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): AvgPool2d(kernel_size=3, stride=2, padding=1)
+    )
+    (1): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(800, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(200, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=200)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(200, 800, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(800, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (2): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(800, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(200, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=200)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(200, 800, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(800, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+    (3): ShuffleNetUnit(
+      (bottlneck): Sequential(
+        (0): PointwiseConv2d(
+          (pointwise): Sequential(
+            (0): Conv2d(800, 200, kernel_size=(1, 1), stride=(1, 1), groups=2)
+            (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): ReLU(inplace=True)
+      )
+      (channel_shuffle): ChannelShuffle()
+      (depthwise): DepthwiseConv2d(
+        (depthwise): Sequential(
+          (0): Conv2d(200, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=200)
+          (1): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (expand): PointwiseConv2d(
+        (pointwise): Sequential(
+          (0): Conv2d(200, 800, kernel_size=(1, 1), stride=(1, 1), groups=2)
+          (1): BatchNorm2d(800, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (relu): ReLU(inplace=True)
+      (shortcut): Sequential()
+    )
+  )
+  (avg): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=800, out_features=3, bias=True)
+)
+2025-07-26 16:48:45,937 Epoch time: 2.94m 56.60s
+2025-07-26 16:49:18,870 Epoch [1/50]  Train Loss: 0.5807  Test Loss: 0.4696  Test Acc: 0.7636  
+2025-07-26 16:49:18,870 level2 Precision: 0.9657  Recall: 0.9373 F1-score: 0.9513(Support: 750)
+2025-07-26 16:49:18,870 level3 Precision: 0.6032  Recall: 0.8493 F1-score: 0.7054(Support: 750)
+2025-07-26 16:49:18,870 level4 Precision: 0.8112  Recall: 0.5040 F1-score: 0.6217(Support: 750)
+2025-07-26 16:49:18,919 Best model saved at epoch 1 
+2025-07-26 16:52:13,677 Epoch time: 2.91m 54.76s
+2025-07-26 16:52:45,557 Epoch [2/50]  Train Loss: 0.4665  Test Loss: 0.4565  Test Acc: 0.7871  
+2025-07-26 16:52:45,557 level2 Precision: 1.0000  Recall: 0.8920 F1-score: 0.9429(Support: 750)
+2025-07-26 16:52:45,557 level3 Precision: 0.8043  Recall: 0.4933 F1-score: 0.6116(Support: 750)
+2025-07-26 16:52:45,557 level4 Precision: 0.6530  Recall: 0.9760 F1-score: 0.7825(Support: 750)
+2025-07-26 16:52:45,582 Best model saved at epoch 2 
+2025-07-26 16:55:42,422 Epoch time: 2.95m 56.84s
+2025-07-26 16:56:15,194 Epoch [3/50]  Train Loss: 0.4500  Test Loss: 0.4042  Test Acc: 0.8058  
+2025-07-26 16:56:15,195 level2 Precision: 1.0000  Recall: 0.9053 F1-score: 0.9503(Support: 750)
+2025-07-26 16:56:15,195 level3 Precision: 0.7861  Recall: 0.5733 F1-score: 0.6631(Support: 750)
+2025-07-26 16:56:15,195 level4 Precision: 0.6875  Recall: 0.9387 F1-score: 0.7937(Support: 750)
+2025-07-26 16:56:15,237 Best model saved at epoch 3 
+2025-07-26 16:59:13,485 Epoch time: 2.97m 58.25s
+2025-07-26 16:59:46,317 Epoch [4/50]  Train Loss: 0.4264  Test Loss: 0.4018  Test Acc: 0.7862  
+2025-07-26 16:59:46,332 level2 Precision: 0.9504  Recall: 0.9453 F1-score: 0.9479(Support: 750)
+2025-07-26 16:59:46,332 level3 Precision: 0.6420  Recall: 0.8107 F1-score: 0.7166(Support: 750)
+2025-07-26 16:59:46,332 level4 Precision: 0.8115  Recall: 0.6027 F1-score: 0.6917(Support: 750)
+2025-07-26 16:59:46,379 Best model saved at epoch 4 

@@ -1,0 +1,557 @@
+2025-06-12 18:44:08,862 === Loading data ===
+2025-06-12 18:44:09,186 === Model Summary ===
+2025-06-12 18:44:09,186 Model Structure:
+2025-06-12 18:44:09,186 
+DenseNet(
+  (conv1): Conv2d(1, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (features): Sequential(
+    (dense_block_layer_0): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(24, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(36, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(48, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(60, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(60, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_0): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block_layer_1): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(36, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(48, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(60, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(60, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(72, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(84, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(84, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(108, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(108, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(120, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(120, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_1): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(132, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(132, 66, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block_layer_2): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(66, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(66, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(78, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(78, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(90, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(90, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(102, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(102, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(114, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(114, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(126, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(126, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(138, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(138, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(150, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(150, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_8): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(162, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(162, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_9): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(174, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(174, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_10): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(186, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(186, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_11): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(198, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(198, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_12): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(210, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(210, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_13): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(222, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(222, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_14): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(234, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(234, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_15): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(246, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(246, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_2): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(258, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(258, 129, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block3): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(129, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(129, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(141, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(141, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(153, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(153, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(165, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(165, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(177, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(177, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(189, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(189, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(201, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(201, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(213, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(213, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_8): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(225, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(225, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_9): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(237, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(237, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_10): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(249, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(249, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_11): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(261, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(261, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(24, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (bn): BatchNorm2d(273, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (dropout): Dropout(p=0.2, inplace=False)
+  (linear): Linear(in_features=273, out_features=3, bias=True)
+)
+2025-06-12 18:44:09,186 
+Total parameters: 299,022
+2025-06-12 18:44:09,186 Trainable parameters: 299,022
+2025-06-12 19:20:19,360 Epoch time: 36.17m 10.15s
+2025-06-12 19:22:04,409 Epoch [1/20]  Train Loss: 0.7556  Test Loss: 0.6005  Test Acc: 0.6933  
+2025-06-12 19:22:04,409 level2 Precision: 0.7919  Recall: 0.9587 F1-score: 0.8673(Support: 750)
+2025-06-12 19:22:04,409 level3 Precision: 0.5830  Recall: 0.6600 F1-score: 0.6191(Support: 750)
+2025-06-12 19:22:04,409 level4 Precision: 0.7018  Recall: 0.4613 F1-score: 0.5567(Support: 750)
+2025-06-12 19:22:04,474 Best model saved at epoch 1 
+2025-06-12 19:57:34,619 Epoch time: 35.50m 30.15s
+2025-06-12 19:59:19,475 Epoch [2/20]  Train Loss: 0.6670  Test Loss: 0.5097  Test Acc: 0.7444  
+2025-06-12 19:59:19,475 level2 Precision: 0.9529  Recall: 0.9173 F1-score: 0.9348(Support: 750)
+2025-06-12 19:59:19,475 level3 Precision: 0.6199  Recall: 0.6480 F1-score: 0.6336(Support: 750)
+2025-06-12 19:59:19,475 level4 Precision: 0.6734  Recall: 0.6680 F1-score: 0.6707(Support: 750)
+2025-06-12 19:59:19,538 Best model saved at epoch 2 
+2025-06-12 20:34:48,999 Epoch time: 35.49m 29.46s
+2025-06-12 20:36:33,449 Epoch [3/20]  Train Loss: 0.6224  Test Loss: 0.5129  Test Acc: 0.7329  
+2025-06-12 20:36:33,449 level2 Precision: 0.8289  Recall: 0.9627 F1-score: 0.8908(Support: 750)
+2025-06-12 20:36:33,449 level3 Precision: 0.7640  Recall: 0.3627 F1-score: 0.4919(Support: 750)
+2025-06-12 20:36:33,449 level4 Precision: 0.6403  Recall: 0.8733 F1-score: 0.7389(Support: 750)
+2025-06-12 21:11:48,827 Epoch time: 35.26m 15.37s
+2025-06-12 21:13:33,944 Epoch [4/20]  Train Loss: 0.5911  Test Loss: 0.4386  Test Acc: 0.7524  
+2025-06-12 21:13:33,944 level2 Precision: 0.9329  Recall: 0.9453 F1-score: 0.9391(Support: 750)
+2025-06-12 21:13:33,944 level3 Precision: 0.7395  Recall: 0.3973 F1-score: 0.5169(Support: 750)
+2025-06-12 21:13:33,944 level4 Precision: 0.6311  Recall: 0.9147 F1-score: 0.7469(Support: 750)
+2025-06-12 21:13:34,001 Best model saved at epoch 4 
+2025-06-12 21:49:05,651 Epoch time: 35.53m 31.65s
+2025-06-12 21:50:50,325 Epoch [5/20]  Train Loss: 0.5631  Test Loss: 0.4314  Test Acc: 0.7920  
+2025-06-12 21:50:50,325 level2 Precision: 0.9462  Recall: 0.9613 F1-score: 0.9537(Support: 750)
+2025-06-12 21:50:50,325 level3 Precision: 0.7906  Recall: 0.5133 F1-score: 0.6225(Support: 750)
+2025-06-12 21:50:50,325 level4 Precision: 0.6753  Recall: 0.9013 F1-score: 0.7721(Support: 750)
+2025-06-12 21:50:50,383 Best model saved at epoch 5 
+2025-06-12 22:26:20,603 Epoch time: 35.50m 30.22s
+2025-06-12 22:28:05,473 Epoch [6/20]  Train Loss: 0.5460  Test Loss: 0.4206  Test Acc: 0.7889  
+2025-06-12 22:28:05,473 level2 Precision: 0.9956  Recall: 0.9133 F1-score: 0.9527(Support: 750)
+2025-06-12 22:28:05,473 level3 Precision: 0.7095  Recall: 0.6253 F1-score: 0.6648(Support: 750)
+2025-06-12 22:28:05,473 level4 Precision: 0.6892  Recall: 0.8280 F1-score: 0.7523(Support: 750)
+2025-06-12 22:28:05,519 Best model saved at epoch 6 
+2025-06-12 23:03:36,290 Epoch time: 35.51m 30.77s
+2025-06-12 23:05:21,125 Epoch [7/20]  Train Loss: 0.5302  Test Loss: 0.3952  Test Acc: 0.7947  
+2025-06-12 23:05:21,125 level2 Precision: 1.0000  Recall: 0.9067 F1-score: 0.9510(Support: 750)
+2025-06-12 23:05:21,125 level3 Precision: 0.7353  Recall: 0.6000 F1-score: 0.6608(Support: 750)
+2025-06-12 23:05:21,125 level4 Precision: 0.6868  Recall: 0.8773 F1-score: 0.7705(Support: 750)
+2025-06-12 23:05:21,179 Best model saved at epoch 7 
+2025-06-12 23:40:51,288 Epoch time: 35.50m 30.11s
+2025-06-12 23:42:35,842 Epoch [8/20]  Train Loss: 0.5166  Test Loss: 0.5966  Test Acc: 0.7240  
+2025-06-12 23:42:35,842 level2 Precision: 0.6936  Recall: 0.9960 F1-score: 0.8177(Support: 750)
+2025-06-12 23:42:35,842 level3 Precision: 0.7127  Recall: 0.6120 F1-score: 0.6585(Support: 750)
+2025-06-12 23:42:35,842 level4 Precision: 0.7996  Recall: 0.5640 F1-score: 0.6615(Support: 750)
+2025-06-13 00:17:50,719 Epoch time: 35.25m 14.87s
+2025-06-13 00:19:35,453 Epoch [9/20]  Train Loss: 0.5295  Test Loss: 0.4451  Test Acc: 0.7942  
+2025-06-13 00:19:35,453 level2 Precision: 0.9385  Recall: 0.9560 F1-score: 0.9472(Support: 750)
+2025-06-13 00:19:35,453 level3 Precision: 0.7720  Recall: 0.5507 F1-score: 0.6428(Support: 750)
+2025-06-13 00:19:35,453 level4 Precision: 0.6909  Recall: 0.8760 F1-score: 0.7725(Support: 750)
+2025-06-13 00:55:05,881 Epoch time: 35.51m 30.42s
+2025-06-13 00:56:50,595 Epoch [10/20]  Train Loss: 0.5061  Test Loss: 0.4784  Test Acc: 0.7733  
+2025-06-13 00:56:50,595 level2 Precision: 1.0000  Recall: 0.9120 F1-score: 0.9540(Support: 750)
+2025-06-13 00:56:50,595 level3 Precision: 0.7703  Recall: 0.4560 F1-score: 0.5729(Support: 750)
+2025-06-13 00:56:50,595 level4 Precision: 0.6364  Recall: 0.9520 F1-score: 0.7628(Support: 750)
+2025-06-13 01:32:22,263 Epoch time: 35.53m 31.66s
+2025-06-13 01:34:07,309 Epoch [11/20]  Train Loss: 0.5132  Test Loss: 0.4305  Test Acc: 0.7862  
+2025-06-13 01:34:07,309 level2 Precision: 0.9476  Recall: 0.9653 F1-score: 0.9564(Support: 750)
+2025-06-13 01:34:07,309 level3 Precision: 0.7221  Recall: 0.5960 F1-score: 0.6530(Support: 750)
+2025-06-13 01:34:07,309 level4 Precision: 0.6897  Recall: 0.7973 F1-score: 0.7396(Support: 750)
+2025-06-13 02:09:38,809 Epoch time: 35.52m 31.49s
+2025-06-13 02:11:23,670 Epoch [12/20]  Train Loss: 0.4931  Test Loss: 0.4706  Test Acc: 0.7591  
+2025-06-13 02:11:23,670 level2 Precision: 0.8206  Recall: 1.0000 F1-score: 0.9014(Support: 750)
+2025-06-13 02:11:23,670 level3 Precision: 0.8328  Recall: 0.3653 F1-score: 0.5079(Support: 750)
+2025-06-13 02:11:23,672 level4 Precision: 0.6792  Recall: 0.9120 F1-score: 0.7786(Support: 750)
+2025-06-13 02:46:55,134 Epoch time: 35.52m 31.46s
+2025-06-13 02:48:39,733 Epoch [13/20]  Train Loss: 0.4842  Test Loss: 0.4163  Test Acc: 0.7853  
+2025-06-13 02:48:39,734 level2 Precision: 0.8993  Recall: 0.9640 F1-score: 0.9305(Support: 750)
+2025-06-13 02:48:39,734 level3 Precision: 0.7310  Recall: 0.5760 F1-score: 0.6443(Support: 750)
+2025-06-13 02:48:39,734 level4 Precision: 0.7158  Recall: 0.8160 F1-score: 0.7626(Support: 750)
+2025-06-13 03:23:57,074 Epoch time: 35.29m 17.34s
+2025-06-13 03:25:41,836 Epoch [14/20]  Train Loss: 0.4652  Test Loss: 0.4098  Test Acc: 0.7907  
+2025-06-13 03:25:41,836 level2 Precision: 0.9334  Recall: 0.9533 F1-score: 0.9433(Support: 750)
+2025-06-13 03:25:41,836 level3 Precision: 0.7804  Recall: 0.5213 F1-score: 0.6251(Support: 750)
+2025-06-13 03:25:41,836 level4 Precision: 0.6846  Recall: 0.8973 F1-score: 0.7767(Support: 750)
+2025-06-13 04:01:11,710 Epoch time: 35.50m 29.87s
+2025-06-13 04:02:56,199 Epoch [15/20]  Train Loss: 0.4569  Test Loss: 0.4034  Test Acc: 0.8071  
+2025-06-13 04:02:56,214 level2 Precision: 0.9526  Recall: 0.9653 F1-score: 0.9589(Support: 750)
+2025-06-13 04:02:56,214 level3 Precision: 0.8173  Recall: 0.5427 F1-score: 0.6522(Support: 750)
+2025-06-13 04:02:56,215 level4 Precision: 0.6905  Recall: 0.9133 F1-score: 0.7865(Support: 750)
+2025-06-13 04:38:25,828 Epoch time: 35.49m 29.61s
+2025-06-13 04:40:10,587 Epoch [16/20]  Train Loss: 0.4482  Test Loss: 0.3907  Test Acc: 0.8062  
+2025-06-13 04:40:10,587 level2 Precision: 0.9468  Recall: 0.9733 F1-score: 0.9599(Support: 750)
+2025-06-13 04:40:10,587 level3 Precision: 0.7784  Recall: 0.5853 F1-score: 0.6682(Support: 750)
+2025-06-13 04:40:10,587 level4 Precision: 0.7049  Recall: 0.8600 F1-score: 0.7748(Support: 750)
+2025-06-13 04:40:10,657 Best model saved at epoch 16 
+2025-06-13 05:15:40,733 Epoch time: 35.50m 30.07s
+2025-06-13 05:17:25,552 Epoch [17/20]  Train Loss: 0.4573  Test Loss: 0.3890  Test Acc: 0.8067  
+2025-06-13 05:17:25,552 level2 Precision: 0.9588  Recall: 0.9613 F1-score: 0.9601(Support: 750)
+2025-06-13 05:17:25,552 level3 Precision: 0.7449  Recall: 0.6387 F1-score: 0.6877(Support: 750)
+2025-06-13 05:17:25,552 level4 Precision: 0.7193  Recall: 0.8200 F1-score: 0.7664(Support: 750)
+2025-06-13 05:17:25,602 Best model saved at epoch 17 
+2025-06-13 05:52:55,338 Epoch time: 35.50m 29.73s
+2025-06-13 05:54:40,171 Epoch [18/20]  Train Loss: 0.4429  Test Loss: 0.3921  Test Acc: 0.8062  
+2025-06-13 05:54:40,171 level2 Precision: 0.9479  Recall: 0.9707 F1-score: 0.9592(Support: 750)
+2025-06-13 05:54:40,171 level3 Precision: 0.7834  Recall: 0.5787 F1-score: 0.6656(Support: 750)
+2025-06-13 05:54:40,171 level4 Precision: 0.7026  Recall: 0.8693 F1-score: 0.7771(Support: 750)
+2025-06-13 05:54:40,184 Early stopping triggered at epoch 18
+2025-06-13 05:54:41,106 
+Confusion Matrix (count):
+2025-06-13 05:54:41,107 
+[[721  29   0]
+ [ 31 479 240]
+ [  0 135 615]]
+2025-06-13 05:54:41,107 
+Confusion Matrix (percentage):
+2025-06-13 05:54:41,108 
+[[96.13333333  3.86666667  0.        ]
+ [ 4.13333333 63.86666667 32.        ]
+ [ 0.         18.         82.        ]]
